@@ -40,79 +40,80 @@ function App() {
             </button>
           </div>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12 city">
-          <h1>Paris</h1>
-        </div>
-      </div>
 
-      <div class="detail row">
-        <div class="col-6 main-temp">
-          <h3>
-            <span class="weather-value">23</span>°
-          </h3>
+        <div class="row">
+          <div class="col-12 city">
+            <h1>Paris</h1>
+          </div>
         </div>
-        <div class="col-6 main-icon">
-          <h2 id="icon">
-            <img src="" />
-          </h2>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-12 ">
-          <p id="date-real">Sunday 16:09</p>
-          <p>
-            <span class="feels">feels </span> like{" "}
-            <span class="weather-value">22</span>°
-            <span class="weather-unit">C</span>
-            <p id="description">clear sky</p>
-          </p>
+        <div class="detail row">
+          <div class="col-6 main-temp">
+            <h3>
+              <span class="weather-value">23</span>°
+            </h3>
+          </div>
+          <div class="col-6 main-icon">
+            <h2 id="icon">
+              <img src="" />
+            </h2>
+          </div>
         </div>
-      </div>
 
-      <div class="info row">
-        <div class="col-4">
-          <p>
-            <img
-              src="https://www.flaticon.com/svg/static/icons/svg/219/219816.svg"
-              width="10%"
-            />
-            <br />
-            <span class="humidity">0</span> %
-          </p>
+        <div class="row">
+          <div class="col-12 ">
+            <p id="date-real">Sunday 16:09</p>
+            <p>
+              <span class="feels">feels </span> like{" "}
+              <span class="weather-value">22</span>°
+              <span class="weather-unit">C</span>
+              <p id="description">clear sky</p>
+            </p>
+          </div>
         </div>
-        <div class="col-4">
-          <p>
-            <img
-              src="https://www.flaticon.com/svg/static/icons/svg/2316/2316581.svg"
-              width="12%"
-            />
-            <br />
-            <span class="min-temp weather-value ">20</span>°
-            <span class="weather-unit">C</span>-
-            <span class="max-temp weather-value">22</span>°
-            <span class="weather-unit">C</span>
-          </p>
+
+        <div class="info row">
+          <div class="col-4">
+            <p>
+              <img
+                src="https://www.flaticon.com/svg/static/icons/svg/219/219816.svg"
+                width="10%"
+              />
+              <br />
+              <span class="humidity">0</span> %
+            </p>
+          </div>
+          <div class="col-4">
+            <p>
+              <img
+                src="https://www.flaticon.com/svg/static/icons/svg/2316/2316581.svg"
+                width="12%"
+              />
+              <br />
+              <span class="min-temp weather-value ">20</span>°
+              <span class="weather-unit">C</span>-
+              <span class="max-temp weather-value">22</span>°
+              <span class="weather-unit">C</span>
+            </p>
+          </div>
+          <div class="col-4">
+            <p>
+              <img
+                src="https://www.flaticon.com/svg/static/icons/svg/481/481476.svg"
+                width="10%"
+              />
+              <br />
+              <span class="wind">18</span>m/s
+            </p>
+          </div>
+          <footer>
+            <a href="https://github.com/Izza-aadil/My-cool-app">
+              {" "}
+              Open-source Code{" "}
+            </a>{" "}
+            by Izza Aadil
+          </footer>{" "}
         </div>
-        <div class="col-4">
-          <p>
-            <img
-              src="https://www.flaticon.com/svg/static/icons/svg/481/481476.svg"
-              width="10%"
-            />
-            <br />
-            <span class="wind">18</span>m/s
-          </p>
-        </div>
-        <footer>
-          <a href="https://github.com/Izza-aadil/My-cool-app">
-            {" "}
-            Open-source Code{" "}
-          </a>{" "}
-          by Izza Aadil
-        </footer>{" "}
       </div>
     </div>
   );

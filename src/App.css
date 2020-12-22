@@ -45,8 +45,12 @@ a {
   font-weight: bold;
   line-height: 30px;
 }
-.foot {
+
+footer {
   font-size: 15px;
+  text-align: center;
+  display: block;
+  margin: auto;
 }
 .city {
   height: 70px;
@@ -127,7 +131,7 @@ a {
 .thu {
   margin-left: 15px;
 }
-.container {
+.App .container {
   font-family: "Noto Sans TC", sans-serif;
   border-radius: 7px;
 
@@ -152,6 +156,7 @@ a {
 }
 #description {
   text-transform: capitalize;
+  line-height: 20px;
 }
 .feels {
   text-transform: capitalize;
