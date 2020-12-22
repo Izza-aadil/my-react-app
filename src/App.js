@@ -5,7 +5,6 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App!</h1>
         <div class="row">
           <div class="search col-6">
             <form id="search-engine" autocomplete="off">
@@ -41,13 +40,6 @@ function App() {
             </button>
           </div>
         </div>
-        <footer>
-          <a href="https://github.com/Izza-aadil/My-cool-app">
-            {" "}
-            Open-source Code{" "}
-          </a>{" "}
-          by Izza Aadil
-        </footer>{" "}
       </div>
       <div class="row">
         <div class="col-12 city">
@@ -114,6 +106,13 @@ function App() {
             <span class="wind">18</span>m/s
           </p>
         </div>
+        <footer>
+          <a href="https://github.com/Izza-aadil/My-cool-app">
+            {" "}
+            Open-source Code{" "}
+          </a>{" "}
+          by Izza Aadil
+        </footer>{" "}
       </div>
     </div>
   );
