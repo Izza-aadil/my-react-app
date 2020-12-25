@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import WeatherForecast from "./weatherForecast";
+import WeatherInfo from "./WeatherInfo";
 import RealDate from "./realDate";
 import axios from "axios";
 import "./App.css";
@@ -147,6 +149,9 @@ return <div>Loading...</div>;
             </p>
           </div>
           </div>
+          
+        <WeatherInfo data={weatherData} />
+        <WeatherForecast city={weatherData.city} />
           <footer>
             <a href="https://github.com/Izza-aadil/My-cool-app">
               {" "}
