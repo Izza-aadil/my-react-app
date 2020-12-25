@@ -6,6 +6,7 @@ import "./App.css";
 
 export default function Weather(props) {
   const[weatherData, setWeatherData]= useState({ready:false});
+   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response){
   console.log(response.data);
@@ -18,6 +19,20 @@ export default function Weather(props) {
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
     });
+  }
+   function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "4ec5e5e21627cfcd9a86ed3b52c8e759";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
   if (!weatherData.ready) {
@@ -34,7 +49,7 @@ return <div>Loading...</div>;
       <div className="container">
         <div className="row">
           <div className="search col-6">
-            <form id="search-engine" autoComplete="off">
+            <form id="search-engine" autoComplete="off" onSubmit={handleSubmit}>
               <input id="city-input" type="text" />
               <label htmlFor="city-input">
                 <svg
