@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import RealDate from "./realDate";
 import axios from "axios";
 import "./App.css";
 
@@ -15,11 +16,12 @@ export default function Weather(props) {
       city:response.data.name,
       humidity:response.data.main.humidity,
       description: response.data.weather[0].description,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
   if (!weatherData.ready) {
-  const apiKey = "b524420f7abffe686b3afa379ce7504c";
+  const apiKey = "4ec5e5e21627cfcd9a86ed3b52c8e759";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(handleResponse);
   
@@ -87,7 +89,8 @@ return <div>Loading...</div>;
 
         <div className="row">
           <div className="col-12 ">
-            <p id="date-real">Sunday 16:09</p>
+            <p id="date-real"><RealDate date={weatherData.date}/>
+            </p>
             <p>
               <span className="feels">{weatherData.description}</span>
               </p>
