@@ -11,7 +11,7 @@ export default function Weather(props) {
   console.log(response.data);
     setWeatherData({
       ready:true,
-      temperature: response.data.main.temp,
+      temperature: Math.round(response.data.main.temp),
       wind: response.data.wind.speed,
       city:response.data.name,
       humidity:response.data.main.humidity,
@@ -86,7 +86,6 @@ return <div>Loading...</div>;
             </h2>
           </div>
         </div>
-
         <div className="row">
           <div className="col-12 ">
             <p id="date-real"><RealDate date={weatherData.date}/>
@@ -94,14 +93,20 @@ return <div>Loading...</div>;
             <p>
               <span className="feels">{weatherData.description}</span>
               </p>
-            <p>
+              </div>
+              </div>
+              <div className= "row">
+                <div className="col-4">
+              <p>
               <img
                 src="https://www.flaticon.com/svg/static/icons/svg/219/219816.svg"
                 width="10%" alt=""
-              /> </p>
+              /> 
               <br />
-             <p> <span className="humidity">{weatherData.humidity}</span> %
+            
+              <span className="humidity">{weatherData.humidity}</span> %
             </p>
+            
           </div>
           <div className="col-4">
             <p>
@@ -126,6 +131,7 @@ return <div>Loading...</div>;
               <span className="wind">{weatherData.wind} </span>m/s
             </p>
           </div>
+          </div>
           <footer>
             <a href="https://github.com/Izza-aadil/My-cool-app">
               {" "}
@@ -135,7 +141,7 @@ return <div>Loading...</div>;
           </footer>{" "}
         </div>
       </div>
-    </div>
+    
   );
   
 }

@@ -18,7 +18,7 @@ h2 {
 h3 {
   text-align: right;
   margin-top: 15px;
-  font-size: 70px;
+  font-size: 90px;
   color: #596275;
   position: relative;
   left: 23px;
@@ -87,9 +87,11 @@ footer {
   height: 115px;
 }
 .main-temp {
+  line-height: 10px;
   padding-right: 0;
 }
 .main-icon {
+  position: relative;
   padding-left: 0;
 }
 .data {
@@ -125,12 +127,7 @@ footer {
   margin-left: 5px;
   color: rgb(89, 98, 117);
 }
-.wed {
-  margin-left: 15px;
-}
-.thu {
-  margin-left: 15px;
-}
+
 .App .container {
   font-family: "Noto Sans TC", sans-serif;
   border-radius: 7px;
@@ -168,4 +165,10 @@ footer {
 .selected-unit {
   font-weight: bolder;
   text-decoration: underline;
+}
+.humidity {
+  line-height: 20px;
+}
+#date-real {
+  line-height: 20px;
 }
