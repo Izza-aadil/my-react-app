@@ -50,7 +50,7 @@ return <div>Loading...</div>;
         <div className="row">
           <div className="search col-6">
             <form id="search-engine" autoComplete="off" onSubmit={handleSubmit}>
-              <input id="city-input" type="text" />
+              <input id="city-input" type="text" onChange={handleCityChange} />
               <label htmlFor="city-input">
                 <svg
                   width="1em"
