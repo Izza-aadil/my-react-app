@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import WeatherForecast from "./weatherForecast";
-import WeatherInfo from "./WeatherInfo";
 import RealDate from "./realDate";
+import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./weatherTemperature";
 import axios from "axios";
 import "./App.css";
 
@@ -20,6 +21,11 @@ export default function Weather(props) {
       humidity:response.data.main.humidity,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
+       icon:response.data.weather[0].icon,
+       feelsLike:Math.round(response.data.main.feels_like),
+       minTemp: Math.round(response.data.main.temp_min),
+       maxTemp: Math.round(response.data.main.temp_max),
+       
     });
   }
    function handleSubmit(event) {
@@ -74,15 +80,7 @@ return <div>Loading...</div>;
               </label>
             </form>
           </div>
-          <div className="col-6">
-            <button id="weather-unit-toggle" className="btn">
-              <span className="celsius-button selected-unit">C</span> |{" "}
-              <span className="fahrenheit-button">F</span>
-            </button>
-            <button className="btn location-btn">
-              <img src="location-pin.png" width="200px" alt=""/>
-            </button>
-          </div>
+         
         </div>
 
         <div className="row">
@@ -93,15 +91,12 @@ return <div>Loading...</div>;
 
         <div className="detail row">
           <div className="col-6 main-temp">
-            <h3>
-              <span className="weather-value">{weatherData.temperature}</span>°
-            </h3>
-          </div>
-          <div className="col-6 main-icon">
-            <h2 id="icon">
-              <img src="" alt=""/>
+            <h2>
+              {weatherData.temperature}°
             </h2>
           </div>
+          <div className="col-6"><WeatherIcon code={weatherData.icon}/> </div>
+         
         </div>
         <div className="row">
           <div className="col-12 ">
@@ -110,6 +105,10 @@ return <div>Loading...</div>;
             <p>
               <span className="feels">{weatherData.description}</span>
               </p>
+              
+              <p>
+                <span className="feels-like">Feels Like {weatherData.feelsLike}</span>
+              </p>
               </div>
               </div>
               <div className= "row">
@@ -117,8 +116,9 @@ return <div>Loading...</div>;
               <p>
               <img
                 src="https://www.flaticon.com/svg/static/icons/svg/219/219816.svg"
-                width="10%" alt=""
+                width="30%" alt=""
               /> 
+              <br />
               <br />
             
               <span className="humidity">{weatherData.humidity}</span> %
@@ -129,12 +129,15 @@ return <div>Loading...</div>;
             <p>
               <img
                 src="https://www.flaticon.com/svg/static/icons/svg/2316/2316581.svg"
-                width="12%" alt=""
+                width="30%" alt=""
               />
               <br />
-              <span className="min-temp weather-value ">20</span>°
+              <br />
+              <br />
+
+            <span className="min-temp weather-value ">{weatherData.minTemp}</span>°
               <span className="weather-unit">C</span>-
-              <span className="max-temp weather-value">22</span>°
+              <span className="max-temp weather-value">{weatherData.maxTemp}</span>°
               <span className="weather-unit">C</span>
             </p>
           </div>
@@ -142,15 +145,17 @@ return <div>Loading...</div>;
             <p>
               <img
                 src="https://www.flaticon.com/svg/static/icons/svg/481/481476.svg"
-                width="10%" alt=""
+                width="30%" alt=""
               />
+               <br />
+              <br />
               <br />
               <span className="wind">{weatherData.wind} </span>m/s
             </p>
           </div>
           </div>
           
-        <WeatherInfo data={weatherData} />
+       
         <WeatherForecast city={weatherData.city} />
           <footer>
             <a href="https://github.com/Izza-aadil/My-cool-app">

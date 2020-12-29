@@ -7,21 +7,14 @@ h1 {
   line-height: 60px;
   color: rgb(49, 56, 71);
 }
+
 h2 {
-  display: inline;
-  border: none;
-  text-align: center;
-  line-height: 106px;
-  font-size: 55px;
-  margin-left: 15px;
-}
-h3 {
   text-align: right;
-  margin-top: 15px;
-  font-size: 90px;
+  margin-top: 1px;
+  font-size: 100px;
   color: #596275;
   position: relative;
-  left: 23px;
+  left: 10px;
 }
 p {
   text-align: center;
@@ -39,8 +32,8 @@ button img {
   width: 20px;
   height: 20px;
 }
-a {
-  color: #596275;
+footer a {
+  color: #414755;
   text-decoration: none;
   font-weight: bold;
   line-height: 30px;
@@ -51,6 +44,7 @@ footer {
   text-align: center;
   display: block;
   margin: auto;
+  line-height: 40px;
 }
 .city {
   height: 70px;
@@ -83,8 +77,8 @@ footer {
 .detail {
   border: hidden;
   border-color: #42a5f5;
-  margin-top: 15px;
-  height: 115px;
+
+  margin-bottom: 15px;
 }
 .main-temp {
   line-height: 10px;
@@ -171,4 +165,10 @@ footer {
 }
 #date-real {
   line-height: 20px;
+}
+.tempRange {
+  line-height: 5px;
+}
+.feels-like {
+  line-height: 17px;
 }
