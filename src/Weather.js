@@ -93,13 +93,22 @@ return <div>Loading...</div>;
           <div className="col-6 main-temp">
             <h2>
               {weatherData.temperature}°
-            </h2>
+             
+              
+              </h2>
+            
+                         
           </div>
-          <div className="col-6"><WeatherIcon code={weatherData.icon}/> </div>
+          <div className="col-6 main-icon">
+             
+            <WeatherIcon code={weatherData.icon}/> 
+            
+           
+            </div>
          
         </div>
         <div className="row">
-          <div className="col-12 ">
+          <div className="col-12 infoData">
             <p id="date-real"><RealDate date={weatherData.date}/>
             </p>
             <p>
