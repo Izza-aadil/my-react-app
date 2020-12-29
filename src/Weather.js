@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import WeatherForecast from "./weatherForecast";
 import RealDate from "./realDate";
 import WeatherIcon from "./WeatherIcon";
-import WeatherTemperature from "./weatherTemperature";
+
 import axios from "axios";
 import "./App.css";
 
